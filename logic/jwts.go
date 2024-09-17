@@ -58,6 +58,7 @@ func CreateUserJWT(username string, role models.UserRoleID) (response string, er
 	claims := &models.UserClaims{
 		UserName: username,
 		Role:     role,
+		RacAutoDisable: (role != models.SuperAdminRole && role != models.AdminRole),
 		RegisteredClaims: jwt.RegisteredClaims{
 			Issuer:    "Netmaker",
 			Subject:   fmt.Sprintf("user|%s", username),
