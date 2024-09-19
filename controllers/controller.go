@@ -26,6 +26,7 @@ var HttpHandlers = []interface{}{
 	nodeHandlers,
 	userHandlers,
 	networkHandlers,
+	aclHandlers,
 	dnsHandlers,
 	fileHandlers,
 	serverHandlers,
